@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-176px * 10));
+    }
+}
+
+* {
+    font-family: "Roboto", sans-serif !important;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon-marker{
+    filter: grayscale(40%);
+}
+.icon-marker:hover{
+    filter: grayscale(0%);
+}
+.ubeton-popup-text {
+    color: #2eb473;
+    font-weight: bold;
+    text-align: center;
+}
+.ubeton-body {
+    border: 2px solid #2eb473;
+    width: 100%;
+    height: 100%;
+}
+#ubeton-container {
+    overflow: hidden;
+    padding: 0.2rem 0;
+    gap: 1rem;
+    justify-content: flex-start;
+}
+
+#ubeton-container-cards {
+    color: #2eb473;
+    height: 100px;
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    animation: scroll 50s linear infinite ;
+    justify-content: flex-start;
+}
+#ubeton-container:hover #ubeton-container-cards{
+    animation-play-state: paused;
+}
+.ubeton-card {
+    width: 160px;
+    height: 80px;
+    cursor: pointer;
+    padding: 0.5em;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    transition: scale 1s;
+}
+.ubeton-column {
+    display: flex;
+    flex-direction: column;
+}
+.ubeton-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.ubeton-text {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+.ubeton-font-weight {
+    font-weight:bold;
+}
+.ubeton-img {
+    max-width: 80px;
+    width: 100%;
+    text-align: center;
+}
+
+.ubeton-city {
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-bottom: 7px;
+}
+.ubeton-bought {
+    font-size: 1.5rem;
+    display: none;
+}
+.ubeton-camion-toupie {
+    background-image: url('./toupie.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.ubeton-link {
+    text-decoration: none;
+    color: #2eb473;
+}
+.ubeton-link:visited {
+    color: #2eb473 !important;
+}
+.ubeton-card:hover{
+    border: 3px solid #2eb473;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
+.ubeton-card:hover .ubeton-text .ubeton-weight,.ubeton-card:hover .ubeton-type,.ubeton-card:hover .ubeton-city {
+    display: none;
+}
+.ubeton-card:hover .ubeton-text .ubeton-column .ubeton-bought{
+    display: block;
+}
+.ubeton-container-card {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    height: 100px;
+}
+.ubeton-container-img {
+    align-items: center;
+    justify-content: center;
+}

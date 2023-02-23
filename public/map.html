@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tracker Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+</head>
+<body>
+  <div class="ubeton-body">
+    <div id="ubeton-map"></div>
+    <div id="ubeton-container" class="ubeton-row" style="height: 100px; width: 100%;">
+      <div id="ubeton-container-cards">
+      </div>
+    </div>
+  </div>
+  <template id="ubeton-cards">
+    <a href="http://www.ubeton.fr/" target="_blank" class="ubeton-card ubeton-green ubeton-column ubeton-link">
+      <div class="ubeton-container-card">
+        <div class="ubeton-city ubeton-font-weight"></div>
+        <div class="ubeton-type ubeton-font-weight"></div>
+        <div class="ubeton-text ubeton-row">
+          <div class="ubeton-weight"><span class="ubeton-font-weight"></span> disponibles</div>
+          <!-- <div class="delivery">livré avec un</div>
+          <div class="camion font-weight">camion toupie</div> -->
+          <div class="ubeton-column ubeton-container-img">
+            <img class="ubeton-img" src="./toupie.png" alt="ubeton-camion_toupie">
+            <div class="ubeton-bought">Commander</div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </template>
+<script src="index.js"> </script>
+</body>
+</html>
